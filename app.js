@@ -60,7 +60,12 @@ button.addEventListener("click", async function () {
 
         // Ausgabe anzeigen
         output.innerHTML = "";
-        output.appendChild(result);
+       if (result) {
+    output.innerHTML = "";
+    output.appendChild(result);
+} else {
+    output.innerHTML = "<h2>Die Transformation hat kein Ergebnis geliefert.</h2>";
+}
 
     }
     catch (e) {
