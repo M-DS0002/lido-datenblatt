@@ -170,7 +170,7 @@ fieldset {
 						<xsl:if test="$display">
 							<xsl:if test="$structured">
 								<div class="display">
-									<strong>Anzeigewert</strong>
+									<text><u>Anzeigewert</u></text>
 									<br/>
 								</div>
 							</xsl:if>
@@ -183,7 +183,7 @@ fieldset {
 						</xsl:if>
 						<xsl:if test="$display and $structured">
 							<div class="structured">
-								<strong>Strukturierte Angaben</strong>
+								<text><u>Strukturierte Angaben</u></text>
 								<br/>
 							</div>
 						</xsl:if>
@@ -248,7 +248,7 @@ fieldset {
 						<xsl:if test="$display">
 							<xsl:if test="$structured">
 								<div class="display">
-									<strong>Anzeigewert</strong>
+									<text><u>Anzeigewert</u></text>
 									<br/>
 								</div>
 							</xsl:if>
@@ -261,7 +261,7 @@ fieldset {
 						</xsl:if>
 						<xsl:if test="$display and $structured">
 							<div class="structured">
-								<strong>Strukturierte Angaben</strong>
+								<text><u>Strukturierte Angaben</u></text>
 								<br/>
 							</div>
 						</xsl:if>
@@ -302,7 +302,7 @@ fieldset {
 							<xsl:if test="$display">
 								<xsl:if test="$structured">
 									<div class="display">
-										<strong>Anzeigewert</strong>
+										<text><u>Anzeigewert</u></text>
 										<br/>
 									</div>
 								</xsl:if>
@@ -315,7 +315,7 @@ fieldset {
 							</xsl:if>
 							<xsl:if test="$display and $structured">
 								<div class="structured">
-									<strong>Strukturierte Angaben</strong>
+									<text><u>Strukturierte Angaben</u></text>
 									<br/>
 								</div>
 							</xsl:if>
@@ -368,7 +368,7 @@ fieldset {
 									<xsl:if test="$display">
 										<xsl:if test="$structured">
 											<div class="display">
-												<strong>Anzeigewert</strong>
+												<text><u>Anzeigewert</u></text>
 												<br/>
 											</div>
 										</xsl:if>
@@ -381,7 +381,7 @@ fieldset {
 									</xsl:if>
 									<xsl:if test="$display and $structured">
 										<div class="structured">
-											<strong>Strukturierte Angaben</strong>
+											<text><u>Strukturierte Angaben</u></text>
 											<br/>
 										</div>
 									</xsl:if>
@@ -441,7 +441,7 @@ fieldset {
 									<xsl:if test="$display">
 										<xsl:if test="$structured">
 											<div class="display">
-												<strong>Anzeigewert</strong>
+												<text><u>Anzeigewert</u></text>
 												<br/>
 											</div>
 										</xsl:if>
@@ -449,7 +449,7 @@ fieldset {
 									</xsl:if>
 									<xsl:if test="$display and $structured">
 										<div class="structured">
-											<strong>Strukturierte Angaben</strong>
+											<text><u>Strukturierte Angaben</u></text>
 											<br/>
 										</div>
 									</xsl:if>
@@ -479,7 +479,7 @@ fieldset {
 									<xsl:if test="$display">
 										<xsl:if test="$structured">
 											<div class="display">
-												<strong>Anzeigewert</strong>
+												<text><u>Anzeigewert</u></text>
 												<br/>
 											</div>
 										</xsl:if>
@@ -492,7 +492,7 @@ fieldset {
 									</xsl:if>
 									<xsl:if test="$display and $structured">
 										<div class="structured">
-											<strong>Strukturierte Angaben</strong>
+											<text><u>Strukturierte Angaben</u></text>
 											<br/>
 										</div>
 									</xsl:if>
@@ -544,7 +544,7 @@ fieldset {
 							<xsl:if test="$display">
 								<xsl:if test="$structured">
 									<div class="display">
-										<strong>Anzeigewert</strong>
+										<text><u>Anzeigewert</u></text>
 										<br/>
 									</div>
 								</xsl:if>
@@ -557,7 +557,7 @@ fieldset {
 							</xsl:if>
 							<xsl:if test="$display and $structured">
 								<div class="structured">
-									<strong>Strukturierte Angaben</strong>
+									<text><u>Strukturierte Angaben</u></text>
 									<br/>
 								</div>
 							</xsl:if>
