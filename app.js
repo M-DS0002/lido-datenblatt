@@ -73,32 +73,6 @@ button.addEventListener("click", async function () {
 
 saveButton.addEventListener("click", function () {
 
-    const html = `<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<title>LIDO-Datenblatt</title>
-</head>
-<body>
-${output.innerHTML}
-</body>
-</html>`;
-
-    const blob = new Blob(
-        [html],
-        { type: "text/html;charset=utf-8" }
-    );
-
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "LIDO-Datenblatt.html";
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    URL.revokeObjectURL(url);
+    alert("Speichern funktioniert!");
 
 });
