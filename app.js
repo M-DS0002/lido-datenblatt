@@ -15,20 +15,32 @@ button.addEventListener("click", async function () {
 
     const parser = new DOMParser();
 
-    const xml = parser.parseFromString(
-        xmlText,
-        "text/xml"
-    );
-	
-	const xsltText = await fetch("datenblatt.xsl")
+  const xml = parser.parseFromString(
+    xmlText,
+    "text/xml"
+);
+
+// XSLT laden
+const xsltText = await fetch("datenblatt.xsl")
     .then(response => response.text());
 
-	const xslt = parser.parseFromString(
+// XSLT parsen
+const xslt = parser.parseFromString(
     xsltText,
     "text/xml"
-	);
+);
 
-    output.innerHTML =
-    "<h2>XML und XSLT erfolgreich geladen</h2>";
+// XSLT-Prozessor erzeugen
+const processor = new XSLTProcessor();
+
+// Stylesheet importieren
+processor.importStylesheet(xslt);
+
+// Transformation durchführen
+const result = processor.transformToFragment(xml, document);
+
+// Ausgabe anzeigen
+output.innerHTML = "";
+output.appendChild(result);
 
 });
