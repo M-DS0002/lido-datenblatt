@@ -1,10 +1,6 @@
 const fileInput = document.getElementById("xmlFile");
 const button = document.getElementById("transformButton");
-const saveButton = document.getElementById("saveButton");
 const output = document.getElementById("output");
-
-// Speichern zunächst deaktivieren
-saveButton.disabled = true;
 
 button.addEventListener("click", async function () {
 
@@ -35,58 +31,54 @@ button.addEventListener("click", async function () {
         "text/xml"
     );
 
-    // XSLT-Prozessor erzeugen
-    const processor = new XSLTProcessor();
+    try {
 
-    // Stylesheet importieren
-    processor.importStylesheet(xslt);
+        console.log("XML geladen:");
+        console.log(xml);
 
-    // Transformation durchführen
-    const result = processor.transformToFragment(
-        xml,
-        document
-    );
+        console.log("XSLT geladen:");
+        console.log(xslt);
 
-    // Ausgabe anzeigen
+        // XSLT-Prozessor erzeugen
+        const processor = new XSLTProcessor();
+
+        console.log("XSLTProcessor erzeugt");
+
+        // Stylesheet importieren
+        processor.importStylesheet(xslt);
+
+        console.log("Stylesheet importiert");
+
+        // Transformation durchführen
+        const result = processor.transformToFragment(
+            xml,
+            document
+        );
+
+        console.log("Transformation erfolgreich");
+        console.log(result);
+
+        // Ausgabe anzeigen
+        output.innerHTML = "";
+       if (result) {
     output.innerHTML = "";
     output.appendChild(result);
+} else {
+    output.innerHTML = "<h2>Die Transformation hat kein Ergebnis geliefert.</h2>";
+}
 
-    // Speichern aktivieren
-    saveButton.disabled = false;
+    }
+    catch (e) {
 
-});
+        console.error("Fehler bei der Transformation:");
+        console.error(e);
 
-saveButton.addEventListener("click", function () {
+        output.innerHTML =
+            "<h2>Fehler bei der Transformation</h2>" +
+            "<pre>" +
+            e +
+            "</pre>";
 
-    const html = `<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<title>LIDO-Datenblatt</title>
-</head>
-<body>
-${output.innerHTML}
-</body>
-</html>`;
-
-    const blob = new Blob(
-        [html],
-        { type: "text/html;charset=utf-8" }
-    );
-
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "LIDO-Datenblatt.html";
-
-    // Wichtig für Chrome
-    document.body.appendChild(link);
-
-    link.click();
-
-    document.body.removeChild(link);
-
-    URL.revokeObjectURL(url);
+    }
 
 });
