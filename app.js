@@ -58,6 +58,8 @@ button.addEventListener("click", async function () {
 
 saveButton.addEventListener("click", function () {
 
+    alert("Speichern wurde geklickt");
+
     const html = `<!DOCTYPE html>
 <html lang="de">
 <head>
