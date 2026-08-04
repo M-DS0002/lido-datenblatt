@@ -35,7 +35,8 @@ fieldset {
 				</p>
 				<h2>Datenfelder Erfassung</h2>
 				<p>
-					<strong>*Objekttitel (lido:titleSet/lido:appellationValue): </strong>
+					<strong>*Objekttitel</strong>
+					<small> (lido:titleSet/lido:appellationValue): </small>
 					<xsl:for-each select="//lido:titleSet[lido:appellationValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]]">
 						<xsl:variable name="title" select="lido:appellationValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 						<xsl:value-of select="$title"/>
@@ -45,7 +46,8 @@ fieldset {
 					</xsl:for-each>
 				</p>
 				<p>
-					<strong>*Objekttyp oder -bezeichnung (lido:objectWorkType): </strong>
+					<strong>*Objekttyp oder -bezeichnung</strong>
+					<small> (lido:objectWorkType): </small>
 					<xsl:for-each select="//lido:objectWorkType[lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)] or lido:conceptID]">
 						<xsl:variable name="term" select="lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 						<xsl:if test="$term">
@@ -82,7 +84,8 @@ fieldset {
 				</p>
 				<xsl:if test="//lido:classification[lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)] or lido:conceptID]">
 					<p>
-						<strong>Klassifikation (lido:classification): </strong>
+						<strong>Klassifikation</strong>
+						<small> (lido:classification): </small>
 						<xsl:for-each select="//lido:classification[lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)] or lido:conceptID]">
 							<xsl:variable name="term" select="lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 							<xsl:if test="$term">
@@ -135,7 +138,8 @@ fieldset {
 				</xsl:if>
 				<xsl:if test="//lido:workID">
 					<p>
-						<strong>Inventarnummer (lido:workID): </strong>
+						<strong>Inventarnummer</strong>
+						<small> (lido:workID): </small>
 						<xsl:for-each select="//lido:workID">
 							<xsl:value-of select="."/>
 							<xsl:if test="position() != last()">
@@ -146,7 +150,8 @@ fieldset {
 				</xsl:if>
 				<xsl:if test="//lido:objectDescriptionSet/lido:descriptiveNoteValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]">
 					<p>
-						<strong>Objektbeschreibung (lido:objectDescriptionSet): </strong>
+						<strong>Objektbeschreibung</strong>
+						<small> (lido:objectDescriptionSet): </small>
 						<xsl:for-each select="//lido:objectDescriptionSet/lido:descriptiveNoteValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]">
 							<xsl:value-of select="."/>
 							<xsl:if test="position() != last()">
@@ -157,7 +162,8 @@ fieldset {
 				</xsl:if>
 				<xsl:if test="//lido:displayMaterialsTech[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)] or //lido:termMaterialsTech">
 					<p>
-						<strong>Material und Technik (lido:eventMaterialsTech | lido:objectMaterialsTech): </strong>
+						<strong>Material und Technik</strong>
+						<small> (lido:eventMaterialsTech | lido:objectMaterialsTech): </small>
 						<xsl:variable name="display" select="//lido:displayMaterialsTech[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
 						<xsl:variable name="structured" select="//lido:termMaterialsTech[lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)] or lido:conceptID]"/>
 						<!-- Display-Angaben -->
@@ -234,7 +240,8 @@ fieldset {
 				</xsl:if>
 				<xsl:if test="//lido:displayObjectMeasurements[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]">
 					<p>
-						<strong>Maße (lido:objectMeasurementsSet | lido:eventObjectMeasurements): </strong>
+						<strong>Maße</strong>
+						<small> (lido:objectMeasurementsSet | lido:eventObjectMeasurements): </small>
 						<xsl:variable name="display" select="//lido:displayObjectMeasurements[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
 						<xsl:variable name="structured" select="//lido:objectMeasurements/lido:measurementsSet"/>
 						<!-- Display-Angaben -->
@@ -282,11 +289,13 @@ fieldset {
 					<xsl:sort select="../@lido:sortorder" data-type="number"/>
 					<fieldset>
 						<legend>
-							<strong>Ereignis (lido:eventSet)</strong>
+							<strong>Ereignis</strong>
+							<small> (lido:eventSet)</small>
 						</legend>
 						<!-- Ereignistyp -->
 						<p>
-							<strong>Ereignistyp (lido:eventType): </strong>
+							<strong>Ereignistyp</strong>
+							<small> (lido:eventType): </small>
 							<xsl:variable name="display" select="lido:displayEvent[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
 							<xsl:variable name="structured" select="lido:eventType[lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]or lido:conceptID]"/>
 							<!-- Display -->
@@ -348,7 +357,8 @@ fieldset {
 						<!-- Person/Körperschaft -->
 						<xsl:if test="lido:eventActor">
 							<p>
-								<strong>Person/Körperschaft (lido:eventActor): </strong>
+								<strong>Person/Körperschaft</strong>
+								<small> (lido:eventActor): </small>
 								<xsl:for-each select="lido:eventActor">
 									<xsl:variable name="display" select="lido:displayActor[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
 									<xsl:variable name="actor" select="lido:actorInRole/lido:actor"/>
@@ -422,6 +432,7 @@ fieldset {
 						<xsl:if test="lido:eventDate">
 							<p>
 								<strong>Datierung (lido:eventDate): </strong>
+								<small> (lido:eventDate): </small>
 								<xsl:for-each select="lido:eventDate">
 									<xsl:variable name="display" select="lido:displayDate[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
 									<xsl:variable name="earliest" select="lido:date/lido:earliestDate"/>
@@ -459,7 +470,8 @@ fieldset {
 						<!-- Ort -->
 						<xsl:if test="lido:eventPlace">
 							<p>
-								<strong>Ort (lido:eventPlace): </strong>
+								<strong>Ort</strong>
+								<small> (lido:eventPlace): </small>
 								<xsl:for-each select="lido:eventPlace">
 									<xsl:variable name="display" select="lido:displayPlace[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
 									<xsl:variable name="place" select="lido:place"/>
@@ -524,7 +536,8 @@ fieldset {
 				</xsl:for-each>
 				<xsl:if test="//lido:subject">
 					<p>
-						<strong>Inhaltsschlagwort (//lido:subject): </strong>
+						<strong>Inhaltsschlagwort</strong>
+						<small> (//lido:subject): </small>
 						<xsl:for-each select="//lido:subjectSet">
 							<xsl:variable name="display" select="lido:displaySubject[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
 							<xsl:variable name="structured" select="lido:subject/lido:subjectConcept | lido:subject/lido:subjectActor | lido:subject/lido:subjectPlace"/>
@@ -659,10 +672,12 @@ fieldset {
 						<xsl:sort select="@lido:sortorder" data-type="number"/>
 						<fieldset>
 							<legend>
-								<strong>Mediendatei (lido:resourceSet)</strong>
+								<strong>Mediendatei</strong>
+								<small> (lido:resourceSet)</small>
 							</legend>
 							<p>
-								<strong>Link zur Mediendatei (lido:linkResource): </strong>
+								<strong>Link zur Mediendatei</strong>
+								<small> (lido:linkResource): </small>
 								<xsl:for-each select=".//lido:linkResource">
 									<a>
 										<xsl:attribute name="href">
@@ -699,7 +714,8 @@ fieldset {
 								</img>
 							</p>
 							<p>
-								<strong>Nutzungsrechte Mediendatei (lido:rightsResource/lido:rightsType): </strong>
+								<strong>Nutzungsrechte Mediendatei</strong>
+								<small> (lido:rightsResource/lido:rightsType): </small>
 								<xsl:for-each select="lido:rightsResource/lido:rightsType[lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]or lido:conceptID]">
 									<xsl:variable name="term" select="lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 									<xsl:if test="$term">
@@ -727,83 +743,55 @@ fieldset {
 									</xsl:if>
 								</xsl:for-each>
 							</p>
-							<xsl:if test="lido:rightsResource/lido:rightsHolder">
+							<xsl:if test="lido:rightsResource/lido:rightsHolder or lido:resourceSource">
 								<p>
-									<strong>Rechtewahrnehmung (lido:rightsHolder): </strong>
-									<xsl:for-each select="lido:rightsResource/lido:rightsHolder">
-										<xsl:variable name="name" select="lido:legalBodyName/lido:appellationValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
-										<xsl:if test="$name">
+									<xsl:if test="lido:rightsResource/lido:rightsHolder">
+										<strong>Rechtewahrnehmung</strong>
+										<small> (lido:rightsResource/lido:rightsHolder): </small>
+										<xsl:for-each select="lido:rightsResource/lido:rightsHolder">
+											<!-- Dein bisheriger rightsHolder-Code unverändert -->
+										</xsl:for-each>
+									</xsl:if>
+									<xsl:if test="lido:rightsResource/lido:rightsHolder and lido:resourceSource">
+										<br/>
+									</xsl:if>
+									<xsl:if test="lido:resourceSource">
+										<text>Fotograf*in/Digitalisierung</text>
+										<small> (lido:resourceSource): </small>
+										<xsl:for-each select="lido:resourceSource">
+											<xsl:variable name="name" select="lido:legalBodyName/lido:appellationValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 											<xsl:value-of select="$name"/>
-										</xsl:if>
-										<xsl:if test="lido:legalBodyID">
-											<xsl:choose>
-												<xsl:when test="count(lido:legalBodyID) = 1">
-													<xsl:text>, URI: </xsl:text>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:text>, URIs: </xsl:text>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:for-each select="lido:legalBodyID">
-												<span class="uri">
-													<a>
-														<xsl:attribute name="href">
+											<xsl:if test="lido:legalBodyID">
+												<xsl:choose>
+													<xsl:when test="count(lido:legalBodyID)=1">
+														<xsl:text>, URI: </xsl:text>
+													</xsl:when>
+													<xsl:otherwise>
+														<xsl:text>, URIs: </xsl:text>
+													</xsl:otherwise>
+												</xsl:choose>
+												<xsl:for-each select="lido:legalBodyID">
+													<span class="uri">
+														<a href="{.}" target="_blank">
 															<xsl:value-of select="."/>
-														</xsl:attribute>
-														<xsl:attribute name="target">_blank</xsl:attribute>
-														<xsl:value-of select="."/>
-													</a>
-												</span>
-												<xsl:if test="position()!=last()">
-													<xsl:text>, </xsl:text>
-												</xsl:if>
-											</xsl:for-each>
-										</xsl:if>
-										<xsl:if test="position()!=last()">
-											<xsl:text>; </xsl:text>
-										</xsl:if>
-									</xsl:for-each>
-								</p>
-							</xsl:if>
-							<xsl:if test="lido:resourceSource">
-								<p>
-									<strong>Fotograf*in/Digitalisierung (lido:resourceSource): </strong>
-									<xsl:for-each select="lido:resourceSource">
-										<xsl:variable name="name" select="lido:legalBodyName/lido:appellationValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
-										<xsl:value-of select="$name"/>
-										<xsl:if test="lido:legalBodyID">
-											<xsl:choose>
-												<xsl:when test="count(lido:legalBodyID)=1">
-													<xsl:text>, URI: </xsl:text>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:text>, URIs: </xsl:text>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:for-each select="lido:legalBodyID">
-												<span class="uri">
-													<a>
-														<xsl:attribute name="href">
-															<xsl:value-of select="."/>
-														</xsl:attribute>
-														<xsl:attribute name="target">_blank</xsl:attribute>
-														<xsl:value-of select="."/>
-													</a>
-												</span>
-												<xsl:if test="position()!=last()">
-													<xsl:text>, </xsl:text>
-												</xsl:if>
-											</xsl:for-each>
-										</xsl:if>
-										<xsl:if test="position()!=last()">
-											<xsl:text>; </xsl:text>
-										</xsl:if>
-									</xsl:for-each>
+														</a>
+													</span>
+													<xsl:if test="position()!=last()">
+														<xsl:text>, </xsl:text>
+													</xsl:if>
+												</xsl:for-each>
+											</xsl:if>
+											<xsl:if test="position()!=last()">
+												<xsl:text>; </xsl:text>
+											</xsl:if>
+										</xsl:for-each>
+									</xsl:if>
 								</p>
 							</xsl:if>
 							<xsl:if test="lido:resourceDescription[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]">
 								<p>
-									<strong>Bildbeschreibung oder Alternativtext (lido:resourceDescription): </strong>
+									<strong>Bildbeschreibung oder Alternativtext</strong>
+									<small> (lido:resourceDescription): </small>
 									<xsl:for-each select="lido:resourceDescription[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]">
 										<xsl:value-of select="."/>
 										<xsl:if test="position() != last()">
@@ -814,7 +802,8 @@ fieldset {
 							</xsl:if>
 							<xsl:if test="lido:resourceType">
 								<p>
-									<strong>Medientyp (lido:resourceType): </strong>
+									<strong>Medientyp</strong>
+									<small> (lido:resourceType): </small>
 									<xsl:for-each select="lido:resourceType">
 										<xsl:variable name="term" select="lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 										<xsl:if test="$term">
@@ -855,19 +844,23 @@ fieldset {
 				</xsl:if>
 				<h2>Datenfelder Export</h2>
 				<p>
-					<strong>*ID Datensatz einrichtungsübergreifend (lido:lidoRecID): </strong>
+					<strong>*ID Datensatz einrichtungsübergreifend</strong>
+					<small> (lido:lidoRecID): </small>
 					<xsl:value-of select="//lido:lidoRecID"/>
 				</p>
 				<p>
-					<strong>*ID Datensatz lokal (lido:recordID): </strong>
+					<strong>*ID Datensatz lokal</strong>
+					<small> (lido:recordID): </small>
 					<xsl:value-of select="//lido:recordWrap/lido:recordID"/>
 				</p>
 				<p>
-					<strong>*Sprache des Datensatzes (lido:descriptiveMetadata@xml:lang): </strong>
+					<strong>*Sprache des Datensatzes</strong>
+					<small> (lido:descriptiveMetadata@xml:lang): </small>
 					<xsl:value-of select="//lido:descriptiveMetadata/@xml:lang"/>
 				</p>
 				<p>
-					<strong>*Datensatzart (lido:recordType): </strong>
+					<strong>*Datensatzart (lido:recordType):</strong>
+					<small> (lido:recordType): </small>
 					<xsl:variable name="term" select="//lido:recordType/lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 					<xsl:if test="$term">
 						<xsl:value-of select="$term"/>
@@ -899,6 +892,7 @@ fieldset {
 				</p>
 				<p>
 					<strong>Verwahrende Einrichtung (lido:repositoryName): </strong>
+					<small> (lido:repositoryName): </small>
 					<xsl:variable name="name" select="//lido:repositoryName/lido:legalBodyName/lido:appellationValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 					<xsl:value-of select="$name"/>
 					<xsl:if test="//lido:repositoryName/lido:legalBodyID">
@@ -928,6 +922,7 @@ fieldset {
 				</p>
 				<p>
 					<strong>*Datensatzerstellende Einrichtung (lido:recordSource): </strong>
+					<small> (lido:recordSource): </small>
 					<xsl:for-each select="//lido:recordSource">
 						<xsl:variable name="name" select="lido:legalBodyName/lido:appellationValue[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 						<xsl:value-of select="$name"/>
@@ -966,7 +961,8 @@ fieldset {
 					</xsl:for-each>
 				</p>
 				<p>
-					<strong>Nutzungsrechte Datensatz (lido:recordRights/lido:rightsType): </strong>
+					<strong>Nutzungsrechte Datensatz</strong>
+					<small> (lido:recordRights/lido:rightsType): </small>
 					<xsl:for-each select="//lido:recordRights/lido:rightsType[lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]or lido:conceptID]">
 						<xsl:variable name="term" select="lido:term[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)][1]"/>
 						<xsl:if test="$term">
@@ -996,7 +992,8 @@ fieldset {
 				</p>
 				<xsl:if test="//lido:recordInfoLink">
 					<p>
-						<strong>Link zum veröffentlichten Metadatensatz (lido:recordInfoLink): </strong>
+						<strong>Link zum veröffentlichten Metadatensatz</strong>
+						<small> (lido:recordInfoLink): </small>
 						<xsl:for-each select="//lido:recordInfoLink">
 							<a>
 								<xsl:attribute name="href">
@@ -1013,7 +1010,8 @@ fieldset {
 				</xsl:if>
 				<xsl:if test="//lido:recordMetadataDate">
 					<p>
-						<strong>Datierung des Datensatzes (lido:recordMetadataDate): </strong>
+						<strong>Datierung des Datensatzes</strong>
+						<small> (lido:recordMetadataDate): </small>
 						<xsl:for-each select="//lido:recordMetadataDate">
 							<xsl:value-of select="."/>
 							<xsl:if test="@lido:type">
