@@ -15,32 +15,65 @@ button.addEventListener("click", async function () {
 
     const parser = new DOMParser();
 
-  const xml = parser.parseFromString(
-    xmlText,
-    "text/xml"
-);
+    // XML parsen
+    const xml = parser.parseFromString(
+        xmlText,
+        "text/xml"
+    );
 
-// XSLT laden
-const xsltText = await fetch("datenblatt.xsl")
-    .then(response => response.text());
+    // XSLT laden
+    const xsltText = await fetch("datenblatt.xsl")
+        .then(response => response.text());
 
-// XSLT parsen
-const xslt = parser.parseFromString(
-    xsltText,
-    "text/xml"
-);
+    // XSLT parsen
+    const xslt = parser.parseFromString(
+        xsltText,
+        "text/xml"
+    );
 
-// XSLT-Prozessor erzeugen
-const processor = new XSLTProcessor();
+    try {
 
-// Stylesheet importieren
-processor.importStylesheet(xslt);
+        console.log("XML geladen:");
+        console.log(xml);
 
-// Transformation durchführen
-const result = processor.transformToFragment(xml, document);
+        console.log("XSLT geladen:");
+        console.log(xslt);
 
-// Ausgabe anzeigen
-output.innerHTML = "";
-output.appendChild(result);
+        // XSLT-Prozessor erzeugen
+        const processor = new XSLTProcessor();
+
+        console.log("XSLTProcessor erzeugt");
+
+        // Stylesheet importieren
+        processor.importStylesheet(xslt);
+
+        console.log("Stylesheet importiert");
+
+        // Transformation durchführen
+        const result = processor.transformToFragment(
+            xml,
+            document
+        );
+
+        console.log("Transformation erfolgreich");
+        console.log(result);
+
+        // Ausgabe anzeigen
+        output.innerHTML = "";
+        output.appendChild(result);
+
+    }
+    catch (e) {
+
+        console.error("Fehler bei der Transformation:");
+        console.error(e);
+
+        output.innerHTML =
+            "<h2>Fehler bei der Transformation</h2>" +
+            "<pre>" +
+            e +
+            "</pre>";
+
+    }
 
 });
