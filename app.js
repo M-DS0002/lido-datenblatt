@@ -58,8 +58,7 @@ button.addEventListener("click", async function () {
 
 saveButton.addEventListener("click", function () {
 
-    const html =
-`<!DOCTYPE html>
+    const html = `<!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -75,13 +74,19 @@ ${output.innerHTML}
         { type: "text/html;charset=utf-8" }
     );
 
-    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
 
-    link.href = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
     link.download = "LIDO-Datenblatt.html";
+
+    // Wichtig für Chrome
+    document.body.appendChild(link);
 
     link.click();
 
-    URL.revokeObjectURL(link.href);
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
 
 });
