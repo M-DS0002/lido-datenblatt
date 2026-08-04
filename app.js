@@ -22,7 +22,7 @@ button.addEventListener("click", async function () {
     );
 
     // XSLT laden
-    const xsltText = await fetch("datenblatt.xsl")
+    const xsltText = await fetch("Datenblatt.xsl")
         .then(response => response.text());
 
     // XSLT parsen
