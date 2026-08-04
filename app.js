@@ -1,3 +1,4 @@
+alert("Neue app.js wurde geladen");
 const fileInput = document.getElementById("xmlFile");
 const button = document.getElementById("transformButton");
 const saveButton = document.getElementById("saveButton");
