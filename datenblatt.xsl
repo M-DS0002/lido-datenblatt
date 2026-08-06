@@ -10,10 +10,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.display, .structured {
-    margin-left: 20px;
-}
-
 img {
     max-width: 250px;
 }
@@ -431,7 +427,7 @@ fieldset {
 						<!-- Datierung -->
 						<xsl:if test="lido:eventDate">
 							<p>
-								<strong>Datierung (lido:eventDate): </strong>
+								<strong>Datierung</strong>
 								<small> (lido:eventDate): </small>
 								<xsl:for-each select="lido:eventDate">
 									<xsl:variable name="display" select="lido:displayDate[@xml:lang='de' or @xml:lang='deu' or @xml:lang='ger' or not(@xml:lang)]"/>
