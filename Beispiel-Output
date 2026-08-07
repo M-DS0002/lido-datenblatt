@@ -1,0 +1,87 @@
+<html lang="de" xmlns:lido="http://www.lido-schema.org">
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<title>LIDO-Datenblatt</title>
+<style type="text/css">
+body {
+    font-family: Arial, sans-serif;
+}
+
+.display, .structured {
+    margin-left: 20px;
+}
+
+img {
+    max-width: 250px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+.uri {
+    font-size: 90%;
+    color: #666;
+}
+</style>
+</head>
+<body>
+<h1>LIDO-Datenblatt</h1>
+<p>
+   Dieses Datenblatt stellt die Inhalte eines LIDO-1.0-Datensatzes anhand der Minimaldatensatz-Empfehlung für Museen und Sammlungen übersichtlich und menschenlesbar dar. Die in Klammern angegebenen XPath-Ausdrücke erleichtern die Zuordnung zu den entsprechenden LIDO-Elementen. LIDO-Pflichtelemente sind mit einem * markiert. 
+				</p>
+<h2>Datenfelder Erfassung</h2>
+<p><strong>*Objekttitel</strong><small> (lido:titleSet/lido:appellationValue): </small>Kabinettschrank, Giacomo Fiammingo, um 1600</p>
+<p><strong>*Objekttyp oder -bezeichnung</strong><small> (lido:objectWorkType): </small>Kabinettschrank, URIs: <span class="uri"><a href="https://d-nb.info/gnd/4162965-6" target="_blank">https://d-nb.info/gnd/4162965-6</a></span>, <span class="uri"><a href="http://vocab.getty.edu/aat/300038888" target="_blank">http://vocab.getty.edu/aat/300038888</a></span></p>
+<p><strong>Klassifikation</strong><small> (lido:classification): </small>Möbel (Objektgattung [http://terminology.lido-schema.org/lido00853]), URI: <span class="uri"><a href="https://d-nb.info/gnd/4039860-2" target="_blank">https://d-nb.info/gnd/4039860-2</a></span>; angewandte Kunst (Themenkategorie [http://terminology.lido-schema.org/lido00932]), URI: <span class="uri"><a href="http://vocab.getty.edu/aat/300054168" target="_blank">http://vocab.getty.edu/aat/300054168</a></span>; Europäisches Kunsthandwerk und Skulptur (http://terminology.lido-schema.org/lido01135)</p>
+<p><strong>Inventarnummer</strong><small> (lido:workID): </small>1977.20; St. 330</p>
+<p><strong>Objektbeschreibung</strong><small> (lido:objectDescriptionSet): </small>Die große Welt im kleinen Schrank: Die Fassadenarchitektur des Kabinettschranks findet ihr Vorbild im antiken Theaterbau. Mit seinem ausgeklügelten System von Fächern und Schubladen diente er zur Aufbewahrung von gesammelten Kostbarkeiten der Kunstkammer. Über seine Bestimmung zum funktionalen Möbel hinaus ist der Schrank selbst auch als Kunstwerk zu verstehen. Die Elfenbeintafeln zeigen ein umfangreiches Bildprogramm: die Gründer der vier großen Weltreiche des Altertums und die Taten des tugendhaften antiken Helden Herkules. Die ausziehbare Schreibplatte enthält eine drehbare Weltkarte, die auf die Habsburger verweist und vermuten lässt, dass das Kabinettmöbel für König Phillipp II. von Spanien angefertigt worden ist.; Sonderzuwendungen von Kurt A. Körber und Axel Springer; Eigentum der Stiftung Hamburger Kunstsammlungen</p>
+<p><strong>Material und Technik</strong><small> (lido:eventMaterialsTech | lido:objectMaterialsTech): </small><div class="display"><text><u>Anzeigewert</u></text><br></div>Palisander, Ebenholz und Makassar-Ebenholz, Elfenbein (Material); graviert (Technik)<div class="structured"><text><u>Strukturierte Angaben</u></text><br></div>Palisander (Material [http://terminology.lido-schema.org/lido00132]), URI: <span class="uri"><a href="http://vocab.getty.edu/aat/300375333" target="_blank">http://vocab.getty.edu/aat/300375333</a></span>; Ebenholz (Material [http://terminology.lido-schema.org/lido00132]), URI: <span class="uri"><a href="https://d-nb.info/gnd/7697258-6" target="_blank">https://d-nb.info/gnd/7697258-6</a></span>; Elfenbein (Material) (Material [http://terminology.lido-schema.org/lido00132]), URI: <span class="uri"><a href="http://vocab.getty.edu/aat/300011857" target="_blank">http://vocab.getty.edu/aat/300011857</a></span>; Gravierung (Technik [http://terminology.lido-schema.org/lido00131]), URIs: <span class="uri"><a href="http://vocab.getty.edu/aat/300053829" target="_blank">http://vocab.getty.edu/aat/300053829</a></span>, <span class="uri"><a href="https://d-nb.info/gnd/4191438-7" target="_blank">https://d-nb.info/gnd/4191438-7</a></span></p>
+<p><strong>Maße</strong><small> (lido:objectMeasurementsSet | lido:eventObjectMeasurements): </small><div class="display"><text><u>Anzeigewert</u></text><br></div>Höhe x Breite x Tiefe: 106 x 101,1 x 60,9 cm; Breite: 190 cm (geöffnet)<div class="structured"><text><u>Strukturierte Angaben</u></text><br></div>Höhe: 106 cm; Breite: 101,1 cm; Tiefe: 60,9 cm; Breite: 190 cm</p>
+<h3>Ereignisse in der Objektgeschichte (lido:eventWrap)</h3>
+<fieldset>
+<legend><strong>Ereignis</strong><small> (lido:eventSet)</small></legend>
+<p><strong>Ereignistyp</strong><small> (lido:eventType): </small>Herstellung, URI: <span class="uri"><a href="http://terminology.lido-schema.org/lido00007" target="_blank">http://terminology.lido-schema.org/lido00007</a></span></p>
+<p><strong>Person/Körperschaft</strong><small> (lido:eventActor): </small>Fiammingo, Giacomo (Möbelbauer), URI: <span class="uri"><a href="https://d-nb.info/gnd/1229708928" target="_blank">https://d-nb.info/gnd/1229708928</a></span>; Curtis, Giovanni Battista de (Stecher), URIs: <span class="uri"><a href="https://d-nb.info/gnd/161108342" target="_blank">https://d-nb.info/gnd/161108342</a></span>, <span class="uri"><a href="https://www.wikidata.org/wiki/Q109996750" target="_blank">https://www.wikidata.org/wiki/Q109996750</a></span>; Picicaro, Januarius (Stecher), URI: <span class="uri"><a href="http://viaf.org/viaf/89840489" target="_blank">http://viaf.org/viaf/89840489</a></span></p>
+<p><strong>Datierung (lido:eventDate): </strong><small> (lido:eventDate): </small><div class="display"><text><u>Anzeigewert</u></text><br></div>um 1600<div class="structured"><text><u>Strukturierte Angaben</u></text><br></div>1596–1605</p>
+<p><strong>Ort</strong><small> (lido:eventPlace): </small>Neapel, URIs: <span class="uri"><a href="https://sws.geonames.org/3172394/" target="_blank">https://sws.geonames.org/3172394/</a></span>, <span class="uri"><a href="http://vocab.getty.edu/tgn/7004474" target="_blank">http://vocab.getty.edu/tgn/7004474</a></span></p>
+</fieldset>
+<p><strong>Inhaltsschlagwort</strong><small> (//lido:subject): </small>Geschichte von Hercules (Herakles), URI: <span class="uri"><a href="https://iconclass.org/94L" target="_blank">https://iconclass.org/94L</a></span>; <div class="display"><text><u>Anzeigewert</u></text><br></div>Buch Daniel: Vier-Reiche-Lehre<div class="structured"><text><u>Strukturierte Angaben</u></text><br></div>Vier-Reiche-Lehre, URIs: <span class="uri"><a href="https://d-nb.info/gnd/110164673X" target="_blank">https://d-nb.info/gnd/110164673X</a></span>, <span class="uri"><a href="https://www.wikidata.org/wiki/Q699242" target="_blank">https://www.wikidata.org/wiki/Q699242</a></span>; Hercules (Dargestellte Person/Körperschaft), URI: <span class="uri"><a href="https://d-nb.info/gnd/133543463" target="_blank">https://d-nb.info/gnd/133543463</a></span>; Romulus (Dargestellte Person/Körperschaft), URI: <span class="uri"><a href="https://d-nb.info/gnd/102405085" target="_blank">https://d-nb.info/gnd/102405085</a></span>; Babylonisches Reich (Dargestellter Ort), URIs: <span class="uri"><a href="https://sws.geonames.org/12489746/" target="_blank">https://sws.geonames.org/12489746/</a></span>, <span class="uri"><a href="https://pleiades.stoa.org/places/912816" target="_blank">https://pleiades.stoa.org/places/912816</a></span>, <span class="uri"><a href="https://www.wikidata.org/entity/Q47690" target="_blank">https://www.wikidata.org/entity/Q47690</a></span>; Perserreich (Dargestellter Ort), URIs: <span class="uri"><a href="http://vocab.getty.edu/tgn/7024079" target="_blank">http://vocab.getty.edu/tgn/7024079</a></span>, <span class="uri"><a href="https://www.wikidata.org/entity/Q83311" target="_blank">https://www.wikidata.org/entity/Q83311</a></span>; Antikes Griechenland (Dargestellter Ort), URIs: <span class="uri"><a href="https://www.wikidata.org/entity/Q11772" target="_blank">https://www.wikidata.org/entity/Q11772</a></span>, <span class="uri"><a href="http://vocab.getty.edu/tgn/7594735" target="_blank">http://vocab.getty.edu/tgn/7594735</a></span>; Römisches Reich (Dargestellter Ort), URIs: <span class="uri"><a href="https://sws.geonames.org/8354456/" target="_blank">https://sws.geonames.org/8354456/</a></span>, <span class="uri"><a href="http://vocab.getty.edu/tgn/7030347" target="_blank">http://vocab.getty.edu/tgn/7030347</a></span>, <span class="uri"><a href="https://www.wikidata.org/entity/Q2277" target="_blank">https://www.wikidata.org/entity/Q2277</a></span>; Rom (Dargestellter Ort), URIs: <span class="uri"><a href="http://vocab.getty.edu/tgn/7594740" target="_blank">http://vocab.getty.edu/tgn/7594740</a></span>, <span class="uri"><a href="https://www.wikidata.org/entity/Q1747689" target="_blank">https://www.wikidata.org/entity/Q1747689</a></span></p>
+<h3>Mediendateien (lido:resourceWrap)</h3>
+<fieldset>
+<legend><strong>Mediendatei</strong><small> (lido:resourceSet)</small></legend>
+<p><strong>Link zur Mediendatei</strong><small> (lido:linkResource): </small><a href="http://resources.digicult-museen.net/dam/provided_image/m5ea54539bef06" target="_blank">http://resources.digicult-museen.net/dam/provided_image/m5ea54539bef06</a> (geliefertes Bild)</p>
+<p><img style="max-width:100px; max-height:100px;" src="http://resources.digicult-museen.net/dam/provided_image/m5ea54539bef06"></p>
+<p><strong>Nutzungsrechte Mediendatei</strong><small> (lido:rightsResource/lido:rightsType): </small>CC0 1.0 Universell, Lizenz-URI: <span class="uri"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">https://creativecommons.org/publicdomain/zero/1.0/</a></span></p>
+<p><text>Fotograf*in/Digitalisierung</text><small> (lido:resourceSource): </small>Roman Raacke</p>
+<p><strong>Bildbeschreibung oder Alternativtext</strong><small> (lido:resourceDescription): </small>Gesamtansicht des Kabinettschranks mit geöffenten Türen</p>
+<p><strong>Medientyp</strong><small> (lido:resourceType): </small>Bild</p>
+</fieldset>
+<fieldset>
+<legend><strong>Mediendatei</strong><small> (lido:resourceSet)</small></legend>
+<p><strong>Link zur Mediendatei</strong><small> (lido:linkResource): </small><a href="http://resources.digicult-museen.net/dam/provided_image/m5ea5453a0926f" target="_blank">http://resources.digicult-museen.net/dam/provided_image/m5ea5453a0926f</a> (geliefertes Bild)</p>
+<p><img style="max-width:100px; max-height:100px;" src="http://resources.digicult-museen.net/dam/provided_image/m5ea5453a0926f"></p>
+<p><strong>Nutzungsrechte Mediendatei</strong><small> (lido:rightsResource/lido:rightsType): </small>CC0 1.0 Universell, Lizenz-URI: <span class="uri"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">https://creativecommons.org/publicdomain/zero/1.0/</a></span></p>
+<p><strong>Rechtewahrnehmung</strong><small> (lido:rightsResource/lido:rightsHolder): </small><br><text>Fotograf*in/Digitalisierung</text><small> (lido:resourceSource): </small>Roman Raacke</p>
+<p><strong>Medientyp</strong><small> (lido:resourceType): </small>Bild</p>
+</fieldset>
+<fieldset>
+<legend><strong>Mediendatei</strong><small> (lido:resourceSet)</small></legend>
+<p><strong>Link zur Mediendatei</strong><small> (lido:linkResource): </small><a href="http://resources.digicult-museen.net/dam/provided_image/m5ea5453a433bb" target="_blank">http://resources.digicult-museen.net/dam/provided_image/m5ea5453a433bb</a> (geliefertes Bild)</p>
+<p><img style="max-width:100px; max-height:100px;" src="http://resources.digicult-museen.net/dam/provided_image/m5ea5453a433bb"></p>
+<p><strong>Nutzungsrechte Mediendatei</strong><small> (lido:rightsResource/lido:rightsType): </small>CC0 1.0 Universell, Lizenz-URI: <span class="uri"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">https://creativecommons.org/publicdomain/zero/1.0/</a></span></p>
+<p><strong>Rechtewahrnehmung</strong><small> (lido:rightsResource/lido:rightsHolder): </small><br><text>Fotograf*in/Digitalisierung</text><small> (lido:resourceSource): </small>Roman Raacke</p>
+<p><strong>Medientyp</strong><small> (lido:resourceType): </small>Bild</p>
+</fieldset>
+<h2>Datenfelder Export</h2>
+<p><strong>*ID Datensatz einrichtungsübergreifend</strong><small> (lido:lidoRecID): </small>DE-MUS-059918_dc00018494</p>
+<p><strong>*ID Datensatz lokal</strong><small> (lido:recordID): </small>dc00018494</p>
+<p><strong>*Sprache des Datensatzes</strong><small> (lido:descriptiveMetadata@xml:lang): </small>deu</p>
+<p><strong>*Datensatzart (lido:recordType):</strong><small> (lido:recordType): </small>Einzelobjekt (Katalogisierungsebene), URI: <span class="uri"><a href="http://terminology.lido-schema.org/lido00141" target="_blank">http://terminology.lido-schema.org/lido00141</a></span></p>
+<p><strong>Verwahrende Einrichtung (lido:repositoryName): </strong><small> (lido:repositoryName): </small>Museum für Kunst und Gewerbe, URI: <span class="uri"><a href="http://ld.zdb-services.de/resource/organisations/DE-MUS-059918" target="_blank">http://ld.zdb-services.de/resource/organisations/DE-MUS-059918</a></span></p>
+<p><strong>*Datensatzerstellende Einrichtung (lido:recordSource): </strong><small> (lido:recordSource): </small>Museum für Kunst und Gewerbe Hamburg, URI: <span class="uri"><a href="https://ld.zdb-services.de/resource/organisations/DE-MUS-059918" target="_blank">https://ld.zdb-services.de/resource/organisations/DE-MUS-059918</a></span>; digiCULT-Verbund eG (dataProvider), URI: <span class="uri"><a href="https://d-nb.info/gnd/16329731-9" target="_blank">https://d-nb.info/gnd/16329731-9</a></span></p>
+<p><strong>Nutzungsrechte Datensatz</strong><small> (lido:recordRights/lido:rightsType): </small>CC0 1.0 Universell, Lizenz-URI: <span class="uri"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">https://creativecommons.org/publicdomain/zero/1.0/</a></span></p>
+<p><strong>Link zum veröffentlichten Metadatensatz</strong><small> (lido:recordInfoLink): </small><a href="http://sammlungonline.mkg-hamburg.de/de/object/Kabinettschrank/1977.20/dc00018494" target="_blank">http://sammlungonline.mkg-hamburg.de/de/object/Kabinettschrank/1977.20/dc00018494</a></p>
+<p><strong>Datierung des Datensatzes</strong><small> (lido:recordMetadataDate): </small>2021-01-30T15:44:49+01:00 (Erstellungsdatum [http://terminology.lido-schema.org/lido00472])</p>
+</body>
+</html>
